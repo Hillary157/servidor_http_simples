@@ -7,7 +7,7 @@ const app= express()
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 
-let id = 1
+let id = 3
 let alunos = [
     {
         id: 1,
@@ -34,7 +34,7 @@ server.listen(3000)
 
 //tratamento de requisições POST
 app.post("/alunos",(req,res)=>{
-    id = id += 1
+    id = id + 1
     const aluno = {
         id: id,
         nome: req.body.nome,
